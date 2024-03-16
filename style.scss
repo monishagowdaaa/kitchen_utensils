@@ -1,0 +1,57 @@
+$primary-color:#2980B9;
+$secondary-color: #ffffff;
+@mixin button-styles {
+  background-color: #2980B9;
+  border: none;
+  color: $secondary-color;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+body {
+  background-color: #29b98b;
+}
+.navbar {
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  .nav-link {
+    color: $secondary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .card {
+    background-color: $secondary-color;
+  }
+}
+.form-group {
+  margin-bottom: 20px;
+
+  label {
+    font-weight: bold;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+}
+.btn-primary {
+  @include button-styles;
+}
+#reviews {
+  .card {
+    margin-bottom: 20px;
+    background-color: $secondary-color;
+  }
+}
